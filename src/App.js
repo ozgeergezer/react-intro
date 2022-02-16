@@ -1,7 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Button from "./components/button";
 
 function App() {
+  const buttonClick = (message) => {
+    alert(message);
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +21,16 @@ function App() {
         >
           Learn React
         </a>
+        <Button
+          clicked={buttonClick}
+          text={"Button1"}
+          className={"blue-button"}
+        />
+        <Button
+          clicked={buttonClick}
+          text={"Button2"}
+          className={"green-button"}
+        />
       </header>
     </div>
   );
